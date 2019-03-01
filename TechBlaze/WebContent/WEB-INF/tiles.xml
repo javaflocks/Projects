@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+
+<tiles-definitions>
+<definition name="baseLayout" template="/baseLayout.jsp">
+      <put-attribute name="title"  value="Template"/>
+      <put-attribute name="header" value="/header.jsp"/>
+      <put-attribute name="menu"   value="/menu.jsp"/>
+      <put-attribute name="body"   value="/body.jsp"/>
+      <put-attribute name="footer"   value="/footer.jsp"/>
+  </definition>
+  
+  <definition name="login" extends="baseLayout">
+      <put-attribute name="title" value="Login Page"/>
+      <put-attribute name="body"  value="/success.jsp"/>      
+  </definition>
+   <definition name="home" extends="baseLayout">
+      <put-attribute name="title" value="Welcome To SDM"/>
+      <put-attribute name="body"  value="/body.jsp"/>      
+  </definition>
+   <definition name="about" extends="baseLayout">
+      <put-attribute name="title" value="SDM | About Us"/>
+      <put-attribute name="body"  value="/about-us.jsp"/>      
+  </definition>
+  <definition name="contactUs" extends="baseLayout">
+      <put-attribute name="title" value="SDM | Contact Us"/>
+      <put-attribute name="body"  value="/contactUs.jsp"/>      
+  </definition>
+  <definition name="services" extends="baseLayout">
+      <put-attribute name="title" value="SDM Services"/>
+      <put-attribute name="body"  value="/services.jsp"/>      
+  </definition>
+  <definition name="products" extends="baseLayout">
+      <put-attribute name="title" value="SDM Products"/>
+      <put-attribute name="body"  value="/products.jsp"/>      
+  </definition>
+  <definition name="signin" extends="baseLayout">
+      <put-attribute name="title" value="SDM Sign In Page"/>
+      <put-attribute name="body"  value="/signin.jsp"/>      
+  </definition>
+  <definition name="signup" extends="baseLayout">
+      <put-attribute name="title" value="SDM SignUp Page"/>
+      <put-attribute name="body"  value="/signup.jsp"/>      
+  </definition>
+  <definition name="bankers" extends="baseLayout">
+      <put-attribute name="title" value="SDM Bakers Detail"/>
+      <put-attribute name="body"  value="/our-bankers.jsp"/>      
+  </definition>
+  <definition name="legal" extends="baseLayout">
+      <put-attribute name="title" value="SDM Legals"/>
+      <put-attribute name="body"  value="/legal.jsp"/>      
+  </definition>
+  <definition name="plans" extends="baseLayout">
+      <put-attribute name="title" value="SDM Joining Plans"/>
+      <put-attribute name="body"  value="/joining-plan.jsp"/>      
+  </definition>
+  <definition name="loginPage" extends="baseLayout">
+      <put-attribute name="title" value="Login Page"/>
+      <put-attribute name="body"  value="/login.jsp"/>      
+  </definition>
+  
+  <definition name="addProduct" extends="baseLayout">
+      <put-attribute name="title" value="Login Page"/>
+      <put-attribute name="body"  value="/addProduct.jsp"/>      
+  </definition>
+  
+  <definition name="updateProduct" extends="baseLayout">
+      <put-attribute name="title" value="Login Page"/>
+      <put-attribute name="body"  value="/updateProduct.jsp"/>      
+  </definition>
+   
+</tiles-definitions>

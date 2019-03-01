@@ -1,0 +1,72 @@
+.inputContainer {
+	POSITION: relative; FLOAT: left
+}
+.formError {
+	Z-INDEX:111; POSITION: absolute; PADDING-BOTTOM: 13px; DISPLAY: block; TOP: 300px; CURSOR: pointer; LEFT: 300px
+}
+#debugMode {
+	Z-INDEX: 100000; POSITION: fixed; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: block; BACKGROUND: #FFFFFF; HEIGHT: 200px; COLOR: #ee2020; FONT-SIZE: 14px; OVERFLOW: scroll; TOP: 0px; PADDING-TOP: 10px; LEFT: 0px; opacity: 0.8
+}
+.ajaxSubmit {
+	BORDER-BOTTOM: #FFFFFF 1px solid; BORDER-LEFT: #FFFFFF 1px solid; PADDING-BOTTOM: 20px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; DISPLAY: none; BACKGROUND: #FFFFFF 0px 0px; COLOR: #FFFFFF; BORDER-TOP: #FFFFFF 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #FFFFFF 1px solid; PADDING-TOP: 20px
+}
+.formError .formErrorContent {
+	BORDER-BOTTOM: #ddd 2px solid; BORDER-LEFT: #ddd 2px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 10px; WIDTH: 180px; PADDING-RIGHT: 10px; FONT-FAMILY: tahoma; BACKGROUND: #FFFFFF; COLOR: #ee2020; FONT-SIZE: 12px; BORDER-TOP: #ddd 2px solid; BORDER-RIGHT: #ddd 2px solid; PADDING-TOP: 4px; box-shadow: 0px 0px 6px #000; -moz-box-shadow: 0px 0px 6px #000; -webkit-box-shadow: 0px 0px 6px #000; border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px
+}
+.greenPopup .formErrorContent {
+	BACKGROUND: #FFFFFF
+}
+.blackPopup .formErrorContent {
+	BACKGROUND: #FFFFFF; COLOR: #ee2020
+}
+.formError .formErrorArrow {
+	Z-INDEX: 10; MARGIN: -2px 0px 0px 13px; WIDTH:15px; display:block !important; overflow:hidden !important;
+}
+.formError .formErrorArrowBottom {
+	MARGIN: -6px; TOP: 0px
+}
+.formError .formErrorArrow DIV {
+	BORDER-LEFT: #FFFFFF 2px solid; LINE-HEIGHT: 0px; MARGIN: 0px auto; DISPLAY: block; BACKGROUND: #FFFFFF; HEIGHT: 1px; FONT-SIZE: 0px; BORDER-RIGHT: #FFFFFF 2px solid; box-shadow: 0px 2px 3px #FFFFFF; -moz-box-shadow: 0px 2px 3px #FFFFFF; -webkit-box-shadow: 0px 2px 3px #FFFFFF
+}
+.formError .formErrorArrowBottom DIV {
+	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none
+}
+.greenPopup .formErrorArrow DIV {
+	BACKGROUND: #FFFFFF
+}
+.blackPopup .formErrorArrow DIV {
+	BACKGROUND: #FFFFFF; COLOR: #ee2020
+}
+.formError .formErrorArrow .line10 {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 15px; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.formError .formErrorArrow .line9 {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 13px; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.formError .formErrorArrow .line8 {
+	WIDTH: 11px
+}
+.formError .formErrorArrow .line7 {
+	WIDTH: 9px
+}
+.formError .formErrorArrow .line6 {
+	WIDTH: 7px
+}
+.formError .formErrorArrow .line5 {
+	WIDTH: 5px
+}
+.formError .formErrorArrow .line4 {
+	WIDTH: 3px
+}
+.formError .formErrorArrow .line3 {
+	BORDER-BOTTOM: #FFFFFF 0px solid; BORDER-LEFT: #FFFFFF 2px solid; WIDTH: 1px; BORDER-RIGHT: #FFFFFF 2px solid
+}
+.formError .formErrorArrow .line2 {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 3px; BACKGROUND: #FFFFFF; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.formError .formErrorArrow .line1 {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 1px; BACKGROUND: #FFFFFF; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+#wrapper A {
+	/*COLOR: #FFFFFF; FONT-SIZE: 16px; FONT-WEIGHT: bold*/
+}

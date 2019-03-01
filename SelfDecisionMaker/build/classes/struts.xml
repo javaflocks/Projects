@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.custom.i18n.resources" value="global,ApplicationResource"  />
+    <include file="struts-default.xml"/>
+    <package name="a"  extends="struts-default">
+    <result-types>
+	  <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+	</result-types>
+        
+       <interceptors>
+                <interceptor class="com.javaflocks.interceptor.LoginInterceptor" name="loginInterceptor">
+                </interceptor>
+                <interceptor-stack name="sessionCheck">
+                        <interceptor-ref name="loginInterceptor" />
+                        <interceptor-ref name="defaultStack" />
+                </interceptor-stack>
+        </interceptors>
+        <global-results>
+  		<result name="errorPage">/error.jsp</result>
+  		<result name="login" type="tiles">login</result>
+	</global-results>
+	    
+        <action name="login" class="com.javaflocks.action.SaiComputerAction" method="login" >
+          <result name="login" type="tiles">login</result>
+        </action>
+        <action name="welcomeAdmin" class="com.javaflocks.action.SaiComputerAction" method="admin" >
+          <result name="success" type="tiles">welcomeAdmin</result>
+        </action>
+        <action name="home" class="com.javaflocks.action.SaiComputerAction" method="home" >
+          <result name="success" type="tiles">home</result>
+        </action>
+        <action name="about" class="com.javaflocks.action.SaiComputerAction" method="about" >
+          <result name="success" type="tiles">about</result>
+        </action>
+        <action name="services" class="com.javaflocks.action.SaiComputerAction" method="services" >
+          <result name="success" type="tiles">services</result>
+        </action>
+        <action name="products" class="com.javaflocks.action.SaiComputerAction" method="products" >
+          <result name="success" type="tiles">products</result>
+        </action>
+        <action name="signin" class="com.javaflocks.action.SaiComputerAction" method="signin" >
+          <result name="success" type="tiles">signin</result>
+        </action>
+        <action name="signup" class="com.javaflocks.action.SaiComputerAction" method="signup" >
+          <result name="success" type="tiles">signup</result>
+        </action>
+       <action name="bankers" class="com.javaflocks.action.SaiComputerAction" method="bankers" >
+          <result name="success" type="tiles">bankers</result>
+        </action>
+        <action name="contactUs" class="com.javaflocks.action.SaiComputerAction" method="contactUs" >
+          <result name="success" type="tiles">contactUs</result>
+        </action>
+        <action name="sendQuery" class="com.javaflocks.action.SaiComputerAction" method="sendQuery" >
+          <result name="success" type="tiles">contactUs</result>
+          <result name="error" type="tiles">contactUs</result>
+          <result name="input" type="tiles">contactUs</result>
+        </action>
+ 		<action name="legal" class="com.javaflocks.action.SaiComputerAction" method="legal" >
+          <result name="success" type="tiles">legal</result>
+        </action>
+  		<action name="plans" class="com.javaflocks.action.SaiComputerAction" method="plans" >
+          <result name="success" type="tiles">plans</result>
+        </action>
+  		 <action name="loginAction" class="com.javaflocks.action.SaiComputerAction" method="loginAction" >
+          <result name="loginPage" type="tiles">loginPage</result>
+        </action>
+        
+        <action name="loginVerify" class="com.javaflocks.action.SaiComputerAction" method="loginVerify" >
+          <result name="LOGINFAIL" type="tiles">loginPage</result>
+          <result name="SUCCESS" type="tiles">welcomeAdmin</result>
+        </action>
+        <action name="logOut" class="com.javaflocks.action.SaiComputerAction" method="logOut" >
+            <result name="login" type="tiles">login</result>
+        </action>
+        <action name="addMember" class="com.javaflocks.action.SaiComputerAction" method="addMember" >
+            <result name="success" type="tiles">addMember</result>
+        </action>
+        
+        <action name="addProduct" class="com.javaflocks.action.SaiComputerAction" method="addProduct" >
+         <interceptor-ref name="sessionCheck" /> 
+          <result name="FAIL" type="tiles">loginPage</result>
+          <result name="SUCCESS" type="tiles">addProduct</result>
+        </action>
+        
+        <action name="saveProduct" class="com.javaflocks.action.SaiComputerAction" method="saveProduct" >
+         <interceptor-ref name="sessionCheck" /> 
+          <result name="FAIL" type="tiles">loginPage</result>
+          <result name="SUCCESS" type="tiles">addProduct</result>
+        </action>
+        <action name="updateProduct" class="com.javaflocks.action.SaiComputerAction" method="updateProduct" >
+         <interceptor-ref name="sessionCheck" /> 
+          <result name="FAIL" type="tiles">loginPage</result>
+          <result name="SUCCESS" type="tiles">updateProduct</result>
+        </action>
+         <action name="searchProduct" class="com.javaflocks.action.SaiComputerAction" method="searchProduct" >
+         <interceptor-ref name="sessionCheck" /> 
+          <result name="FAIL" type="tiles">loginPage</result>
+          <result name="SUCCESS" type="tiles">updateProduct</result>
+        </action>
+        <action name="editProduct" class="com.javaflocks.action.SaiComputerAction" method="editProduct" >
+       <interceptor-ref name="sessionCheck" /> 
+          <result name="FAIL" type="tiles">loginPage</result>
+          <result name="SUCCESS" type="tiles">updateProduct</result>
+        </action>
+        <action name="deleteProduct" class="com.javaflocks.action.SaiComputerAction" method="deleteProduct" >
+         <interceptor-ref name="sessionCheck" /> 
+          <result name="FAIL" type="tiles">loginPage</result>
+          <result name="SUCCESS" type="tiles">updateProduct</result>
+        </action>
+    </package>
+</struts>
